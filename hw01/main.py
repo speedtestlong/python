@@ -3,4 +3,4 @@ for i in range(1, 10):
             print('\t', end='')
         for j in range(i, 10):
             print('{}x{}={}\t'.format(i, j, i*j), end='')
-        print(‘\n’)
+        print('\n')
