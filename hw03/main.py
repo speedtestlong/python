@@ -1,109 +1,44 @@
 import turtle as t
 
 #初始化
-
 t.hideturtle()
 t.speed(10)
 
-#红旗旗面
+#画五角星的函数
 
-t.penup()
+def start(x,y,r,f):
+    t.penup()
+    t.goto(x,y)
+    t.pendown()
+    t.right(r)
+    t.color('yellow','yellow')
+    t.begin_fill()
+    for i in range (5):
+        t.forward(f)
+        t.right(144)
+    t.end_fill()
 
-t.goto(-300,200)
+#画旗面的函数
 
-t.pendown()
+def rectangle(x,y,c,k):
+    t.penup()
+    t.goto(x,y)
+    t.pendown()
+    t.color('red','red')
+    t.begin_fill()
+    for i in range(1):
+        t.forward(c)
+        t.right(90)
+        t.forward(k)
+        t.right(90)
+        t.forward(c)
+        t.right(90)
+        t.forward(k)
+    t.end_fill()
 
-t.color('red','red')
-
-t.begin_fill()
-t.forward(600)
-t.right(90)
-t.forward(400)
-t.right(90)
-t.forward(600)
-t.right(90)
-t.forward(400)
-t.end_fill()
-
-#第一颗星
-
-t.penup()
-
-t.goto(-200,160)
-
-t.pendown()
-
-t.right(162)
-t.color('yellow','yellow')
-t.begin_fill()
-for i in range(5):
-    t.forward(114)
-    t.right(144)
-t.end_fill()
-
-#第二颗星
-
-t.penup()
-
-t.goto(-120,151)
-
-t.pendown()
-
-t.left(120)
-
-t.begin_fill()
-for i in range(5):
-    t.forward(38)
-    t.right(144)
-t.end_fill()
-
-#第三颗星
-
-t.penup()
-
-t.goto(-78.125,114.5)
-
-t.pendown()
-
-t.right(20)
-
-t.begin_fill()
-for i in range(5):
-    t.forward(38)
-    t.right(144)
-
-t.end_fill()
-
-#第四颗星
-
-t.penup()
-
-t.goto(-78.125,62.5)
-
-t.pendown()
-
-t.right(25)
-
-t.begin_fill()
-for i in range(5):
-    t.forward(38)
-    t.right(144)
-
-t.end_fill()
-
-#第五颗星
-
-t.penup()
-
-t.goto(-119.8,36.5)
-
-t.pendown()
-
-t.right(25)
-
-t.begin_fill()
-for i in range(5):
-    t.forward(38)
-    t.right(144)
-
-t.end_fill()
+rectangle(-300,200,600,400)
+start(-200,160,162,114)
+start(-120,151,240,38)
+start(-78.125,114.5,20,38)
+start(-78.125,62.5,25,38)
+start(-119.8,36.5,25,38)
